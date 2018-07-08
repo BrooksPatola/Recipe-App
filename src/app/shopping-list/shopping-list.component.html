@@ -2,6 +2,16 @@
   <div class="col-xs-10">
     <app-shopping-edit></app-shopping-edit>
     <hr>
-    <p>The List</p>
+   <ul class="list-group">
+     <!-- Single item on our shopping list.
+      create inline style and remove href as will use this like a button-->
+     <a 
+     class="list-group-item" 
+     style="cursor:pointer"
+     *ngFor="let ingredient of ingredients"
+     >
+    {{ ingredient.name }} ({{ ingredient.amount }})
+    </a>
+   </ul>
   </div>
 </div>
